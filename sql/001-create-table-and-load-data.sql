@@ -6,7 +6,7 @@ CREATE TABLE assessments (
  posture VARCHAR(100) NOT NULL,
  goal VARCHAR(100) NOT NULL,
  PRIMARY KEY(id)
-);cko
+);
 
 INSERT INTO assessments (name, posture, goal) VALUES ('中村', 'フラットバック', '腰椎改善');
 INSERT INTO assessments (name, posture, goal) VALUES ('上野', 'ロードシス', '重心を引き上げて身軽になる');
