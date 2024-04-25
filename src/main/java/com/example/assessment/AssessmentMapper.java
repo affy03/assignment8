@@ -7,6 +7,6 @@ import java.util.List;
 
 @Mapper
 public interface AssessmentMapper {
-    @Select("SELECT * FROM assessments")
-    List<Assessment> findAll();
+    @Select("SELECT * FROM assessments WHERE name LIKE CONCAT(#{prefix}, '%' )")
+    List<Assessment> findByNameStartingWith(String prefix);
 }
