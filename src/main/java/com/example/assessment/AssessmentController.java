@@ -1,6 +1,7 @@
 package com.example.assessment;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class AssessmentController {
 
 
     @GetMapping("/assessments")
-    public List<Assessment> findAll() {
-        return assessmentMapper.findAll();
+    public List<Assessment> findByAssessments(@RequestParam String startsWith) {
+        return assessmentMapper.findByNameStartingWith(startsWith);
     }
 }
