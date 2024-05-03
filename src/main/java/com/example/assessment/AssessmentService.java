@@ -18,11 +18,11 @@ public class AssessmentService {
     }
 
     public Assessment findById(int id) {
-        Optional<Assessment> user = assessmentMapper.findByIdSearch(id);
+        Optional<Assessment> user = assessmentMapper.findById(id);
         if (user.isPresent()) {
             return user.get();
         } else {
-            throw new ClientNotFoundException("Client with id " + id + " not found");
+            throw new AssessmentNotFoundException("Client with id " + id + " not found");
         }
     }
 }

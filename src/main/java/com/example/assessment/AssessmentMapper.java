@@ -13,5 +13,5 @@ public interface AssessmentMapper {
 
 
     @Select("SELECT * FROM assessments WHERE id = #{id}")
-    Optional<Assessment> findByIdSearch(int id);
+    Optional<Assessment> findById(int id);
 }

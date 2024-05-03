@@ -32,9 +32,9 @@ public class AssessmentController {
         return assessmentService.findById(id);
     }
 
-    @ExceptionHandler(value = ClientNotFoundException.class)
-    public ResponseEntity<Map<String, String>> handleClientNotFoundException(
-            ClientNotFoundException e, HttpServletRequest request) {
+    @ExceptionHandler(value = AssessmentNotFoundException.class)
+    public ResponseEntity<Map<String, String>> handleAssessmentNotFoundException(
+            AssessmentNotFoundException e, HttpServletRequest request) {
 
         Map<String, String> body = Map.of(
                 "timestamp", ZonedDateTime.now().toString(),
